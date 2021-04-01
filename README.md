@@ -1,6 +1,11 @@
 # Movie App
 ## _A Simple Movie App_
 
+## Installation
+- git clone https://github.com/EbinAntoney/movie_app.git
+- cd movie_app
+- go run .
+
 ## Features
 
 - Admin user can create new movies
