@@ -1,0 +1,332 @@
+{
+	"info": {
+		"_postman_id": "214be866-67a5-483f-ab35-8fb00437a997",
+		"name": "Movie_app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Movie API",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "124@#",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : \"126\",\r\n    \"name\" : \"Seven\",\r\n    \"year\" : 1995,\r\n    \"director\" : \"David Fincher\",\r\n    \"genre\" : \"Crime\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/movie",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"movie"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create Movie API Response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : \"126\",\r\n    \"name\" : \"Seven\",\r\n    \"year\" : 1995,\r\n    \"director\" : \"David Fincher\",\r\n    \"genre\" : \"Crime\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/movie",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"movie"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 01 Apr 2021 10:17:43 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "82"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"126\",\n    \"name\": \"Seven\",\n    \"year\": 1995,\n    \"director\": \"David Fincher\",\n    \"genre\": \"Crime\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Private Search API",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "user2",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "123",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/movie/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"movie",
+						"list"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Private Search API Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/movie/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"movie",
+								"list"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 01 Apr 2021 10:23:27 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "374"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": \"123\",\n        \"name\": \"Forrest Gump\",\n        \"year\": 1994,\n        \"director\": \"Robert Zemeckis\",\n        \"genre\": \"Drama\",\n        \"rating\": 8,\n        \"comments\": [\n            \"Good\",\n            \"Average\"\n        ]\n    },\n    {\n        \"id\": \"124\",\n        \"name\": \"The Dark Knight\",\n        \"year\": 2008,\n        \"director\": \"Christopher Nolan\",\n        \"genre\": \"Action\",\n        \"rating\": 8,\n        \"comments\": null\n    },\n    {\n        \"id\": \"125\",\n        \"name\": \"Fight Club\",\n        \"year\": 1999,\n        \"director\": \"David Fincher\",\n        \"genre\": \"Drama\",\n        \"rating\": 8,\n        \"comments\": null\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Public Search API",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/movie/search/Don",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"movie",
+						"search",
+						"Don"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Public Search API Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/movie/search/Don",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"movie",
+								"search",
+								"Don"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 01 Apr 2021 09:57:52 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "143"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": \"123\",\n        \"name\": \"The Don\",\n        \"year\": 2010,\n        \"director\": \"XXX\",\n        \"genre\": \"Action\",\n        \"averageRating\": 6.5,\n        \"totalRating\": 2,\n        \"comments\": [\n            \"Good\",\n            \"Average\"\n        ]\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Rate Movie API",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "user1",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "123",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"rating\": 8\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/movie/rating/123",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"movie",
+						"rating",
+						"123"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Comment Movie API",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "124",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user2",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"comment\" :\"very good Movie\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/movie/comment/124",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"movie",
+						"comment",
+						"124"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
