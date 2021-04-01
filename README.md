@@ -21,4 +21,6 @@
 POSTMAN collection and db dump are included in the repo
 
 mongodb import dump : mongorestore -d movies_db <path>
+  
+
 Also execute the index : db.getCollection('movie').createIndex({ name: "text" })
