@@ -10,7 +10,7 @@
 
 - Admin user can create new movies
 - Guest users can search for movie info, ratings and comments
-- Loged-in users can get movies, which already rated or commented
+- Logged-in users can get movies, which already rated or commented
 - Logged-in users can rate a movie
 - Logged-in users can add comments on a movie
 
